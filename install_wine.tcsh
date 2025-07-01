@@ -38,7 +38,7 @@ wine ./hidemaru/hmsetup.exe /h # /hがサイレントインストールオプシ
 sudo pkg install -y icoutils
 mkdir hidemaru_icon
 wrestool -x --output=./hidemaru_icon -t14 ~/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe
-convert ./hidemaru_icon/Hidemaru.exe_14_102_1041.ico hidemaru.png
+magick ./hidemaru_icon/Hidemaru.exe_14_102_1041.ico hidemaru.png
 cp hidemaru-0.png ~/icons/hidemaru.png
 
 # 秀丸の読み書き設定
