@@ -27,7 +27,7 @@ alias rm	'rm -i'
 # if wanted.
 set path = (/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin $HOME/bin)
 # A righteous umask
-# umask 22
+umask 27
 
 setenv	EDITOR	vi
 setenv	PAGER	less
