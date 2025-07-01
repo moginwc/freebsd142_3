@@ -30,7 +30,7 @@
             "id": "10",
             "name": "NHKニュース",
             "type": "url",
-            "url": "https://www3.nhk.or.jp/news//"
+            "url": "https://www3.nhk.or.jp/news/"
          }, {
             "id": "11",
             "name": "日本気象協会",
