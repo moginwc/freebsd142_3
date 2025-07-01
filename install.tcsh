@@ -83,8 +83,8 @@ sudo pkg install -y -q chromium webfonts
 mkdir ~/Downloads
 
 # 9-1. 9-2.
-cp /usr/local/lib/firefox/browser/chrome/icons/default/default48.png ~/icons/firefox.png
-cp /usr/local/share/icons/hicolor/48x48/apps/chrome.png ~/icons/chrome.png
+cp /usr/local/lib/firefox/browser/chrome/icons/default/default32.png ~/icons/firefox.png
+magick /usr/local/share/icons/hicolor/64x64/apps/chrome.png -resize 32x32 ~/icons/chrome.png
 sudo pkg install -y -q xload
 sudo pkg install -y -q xbatt
 
