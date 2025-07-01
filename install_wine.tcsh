@@ -39,7 +39,7 @@ sudo pkg install -y icoutils
 mkdir hidemaru_icon
 wrestool -x --output=./hidemaru_icon -t14 ~/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe
 convert ./hidemaru_icon/Hidemaru.exe_14_102_1041.ico hidemaru.png
-cp hidemaru-2.png ~/icons/hidemaru.png
+cp hidemaru-0.png ~/icons/hidemaru.png
 
 # 秀丸の読み書き設定
 wineserver -w # wine関係のサーバープロセスをいったん終了する(下記./wine/user.regファイルに追記をしたいため)
