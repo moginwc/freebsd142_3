@@ -12,5 +12,6 @@ if ( -x /usr/bin/resizewin ) /usr/bin/resizewin -z
 #if ( -x /usr/bin/fortune ) /usr/bin/fortune freebsd-tips
 
 ##if ( $?SSH_CLIENT == 0 && $?SSH_TTY == 0 && $?DISPLAY == 0 ) then
-##	startx
+##    # backlight 3
+##    startx
 ##endif
