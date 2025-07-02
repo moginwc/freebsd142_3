@@ -19,3 +19,11 @@ ffmpeg -f video4linux2 -framerate 15 -i /dev/video0 -t 00:00:30 \
   text='%{localtime}': fontcolor=white: fontsize=24: box=1: \
   boxcolor=black@0.5: x=w-tw-8: y=h-th-8" \
   output.mp4
+
+ffmpeg \
+  -f oss -i /dev/dsp \
+  -f lavfi -i color=color=black:size=640x240 \
+  -t 00:00:30 \
+  -vf "drawtext=fontfile=/usr/local/share/fonts/ipa/ipag.otf: \
+      text='%{localtime}': fontsize=32: fontcolor=white: x=16: y=16" \
+  -c:v libx264 -c:a aac -shortest output.mp4
