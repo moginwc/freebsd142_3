@@ -7,8 +7,8 @@ rehash # winetricksがインストールされたことを認識させる
 winetricks corefonts
 wineboot # 初回起動でWineシステムを初期化する
 
-# 梅ゴシックのインストール
-sudo pkg install -y ja-font-ume
+# 梅ゴシック、IPAモナーフォントのインストール
+sudo pkg install -y ja-font-ume ja-font-mona-ipa
 
 # 共通の設定を行う
 wineserver -w # wine関係のサーバープロセスをいったん終了する
@@ -26,6 +26,10 @@ sed -i '' 's/^"CaptionWidth"=.*/"CaptionWidth"="-270"/'                     ~/.w
 sudo pkg install -y ja-nkf
 #保留#　nkf -W8 -w16L -Lw ./wine-common_settings.reg.txt > ./wine-common_settings.reg
 #保留#　regedit /s ./wine-common_settings.reg
+
+# 代替フォントの設定
+nkf -W8 -w16L -Lw ./wine-japanese.reg.txt > ./wine-japanese.reg
+regedit /s ./wine-japanese.reg
 
 # 秀丸のサイレントインストール
 sudo pkg install -y cabextract # 秀丸のインストーラーの実態は.cabファイル
@@ -65,7 +69,3 @@ cp -r Bz1987Portable ~/wine_bin/Bz
 # wine設定ファイルのコメント外し
 sed -i '' 's/^#wine#//g' ~/.fvwm2rc
 sed -i '' 's/^#wine#//g' ~/.cshrc
-
-# 代替フォントの設定
-nkf -W8 -w16L -Lw ./wine-japanese.reg.txt > ./wine-japanese.reg
-regedit /s ./wine-japanese.reg
