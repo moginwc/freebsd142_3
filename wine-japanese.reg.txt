@@ -32,6 +32,6 @@ Windows Registry Editor Version 5.00
 "游明朝"="Noto Serif JP"
 
 ' 追加
-"SimSun"="Ume P Gothic"
-"Segoe UI"="Ume P Gothic"
+"SimSun"="IPAMonaPGothic"
+"Segoe UI"="IPAMonaPGothic"
 
