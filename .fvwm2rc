@@ -40,7 +40,7 @@ DestroyFunc Func-LaunchOrRaise_mlterm
 AddToFunc Func-LaunchOrRaise_mlterm
 + I Next (mlterm) Raise
 + I Next (mlterm) Focus
-+ I None (mlterm) Exec mlterm -geometry 132x24 -title="端末エミュレータ"
++ I None (mlterm) Exec mlterm -geometry 80x24 -title="端末エミュレータ"
 
 # ランチャー(conky) 起動またはフォーカスする
 DestroyFunc Func-LaunchOrRaise_conky
