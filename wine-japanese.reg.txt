@@ -7,12 +7,12 @@ Windows Registry Editor Version 5.00
 "Meiryo"="Noto Sans JP"
 "MS Gothic"="Ume Gothic"
 "MS Mincho"="Ume Mincho"
-"MS PGothic"="Ume P Gothic"
+"MS PGothic"="IPAMonaPGothic"
 "MS PMincho"="Ume P Mincho"
-"MS Sans Serif"="Ume P Gothic"
+"MS Sans Serif"="IPAMonaPGothic"
 "MS Shell Dlg"="Ume UI Gothic"
 "MS UI Gothic"="Ume UI Gothic"
-"ＭＳ Ｐゴシック"="Ume P Gothic"
+"ＭＳ Ｐゴシック"="IPAMonaPGothic"
 "ＭＳ Ｐ明朝"="Ume P Mincho"
 "ＭＳ ゴシック"="Ume Gothic"
 "ＭＳ 明朝"="Ume Mincho"
@@ -34,3 +34,4 @@ Windows Registry Editor Version 5.00
 ' 追加
 "SimSun"="Ume P Gothic"
 "Segoe UI"="Ume P Gothic"
+
