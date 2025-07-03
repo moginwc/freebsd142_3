@@ -24,35 +24,35 @@ AddToFunc WindowListFunc
 # ランチャー(firefox) 起動またはフォーカスする
 DestroyFunc Func-LaunchOrRaise_firefox
 AddToFunc Func-LaunchOrRaise_firefox
-+ I Next (firefox-esr) Raise
++ I All  (firefox-esr) Raise
 + I Next (firefox-esr) Focus
 + I None (firefox-esr) Exec firefox
 
-# ランチャー(chrome) 起動またはフォーカスする
-DestroyFunc Func-LaunchOrRaise_chrome
-AddToFunc Func-LaunchOrRaise_chrome
-+ I Next (Chromium-browser) Raise
+# ランチャー(chromium) 起動またはフォーカスする
+DestroyFunc Func-LaunchOrRaise_chromium
+AddToFunc Func-LaunchOrRaise_chromium
++ I All  (Chromium-browser) Raise
 + I Next (Chromium-browser) Focus
 + I None (Chromium-browser) Exec chrome --no-default-browser-check
 
 # ランチャー(mlterm) 起動またはフォーカスする
 DestroyFunc Func-LaunchOrRaise_mlterm
 AddToFunc Func-LaunchOrRaise_mlterm
-+ I Next (mlterm) Raise
++ I All (mlterm) Raise
 + I Next (mlterm) Focus
 + I None (mlterm) Exec mlterm -geometry 80x24 -title="端末エミュレータ"
 
 # ランチャー(conky) 起動またはフォーカスする
 DestroyFunc Func-LaunchOrRaise_conky
 AddToFunc Func-LaunchOrRaise_conky
-+ I Next (conky) Raise
++ I All  (conky) Raise
 + I Next (conky) Focus
 + I None (conky) Exec conky
 
 # ランチャー(hidemaru.exe) 起動またはフォーカスする
 DestroyFunc Func-LaunchOrRaise_hidemaru
 AddToFunc Func-LaunchOrRaise_hidemaru
-+ I Next (hidemaru.exe) Raise
++ I All  (hidemaru.exe) Raise
 + I Next (hidemaru.exe) Focus
 + I None (hidemaru.exe) Exec wine $HOME/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe
 
@@ -203,13 +203,36 @@ AddToMenu Window-Ops2 "復元"                            Iconify
 +                     ""                                Nop
 +                     "閉じる"                          Delete
 
-# ランチャー(mlterm) 起動または終了するメニュー
-AddToMenu mltermmenu
+# ランチャー(firefox)右クリックメニュー
+AddToMenu firefox_menu
++                     "Firefox"                         Title
++                     "新規ウインドウ"                  Exec firefox --new-window
++                     "新規プライベートウインドウ"      Exec firefox --private-window
++                     ""                                Nop
++                     "終了"                            All (firefox-esr) Close
+
+# ランチャー(chromium)右クリックメニュー
+AddToMenu chromium_menu
++                     "Chromium"                        Title
++                     "新規ウインドウ"                  Exec chrome --no-default-browser-check
++                     "新規プライベートウインドウ"      Exec chrome --no-default-browser-check --incognito
++                     ""                                Nop
++                     "終了"                            All (Chromium-browser) Close
+
+# ランチャー(mlterm)右クリックメニュー
+AddToMenu mlterm_menu
 +                     "mlterm"                          Title
 +                     "新規ウインドウ 80x24"            Exec mlterm -geometry 80x24 -title=端末エミュレータ
 +                     "新規ウインドウ 132x24"           Exec mlterm -geometry 132x24 -title=端末エミュレータ
 +                     ""                                Nop
 +                     "終了"                            All (mlterm) Close
+
+# ランチャー(hidemaru)右クリックメニュー
+AddToMenu hidemaru_menu
++                     "秀丸エディタ"                    Title
++                     "新規ドキュメント"                Exec wine $HOME/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe
++                     ""                                Nop
++                     "終了"                            All (hidemaru.exe) Close
 
 #----------------------------------------------------------------------
 # 5: マウスとキー設定
@@ -319,14 +342,12 @@ Style "QuitVerify" NoTitle, NoHandles, BorderWidth 5
 ##*FvwmButtons: ButtonGeometry 64x64+523-0
 ##*FvwmButtons: Rows           1
 
-##*FvwmButtons: (Icon "firefox.png",   Action (Mouse 1) Func-LaunchOrRaise_firefox)
-##*FvwmButtons: (Icon "chrome.png",    Action (Mouse 1) Func-LaunchOrRaise_chrome)
-##*FvwmButtons: (Icon "xterm-sol.png", Action (Mouse 1) Func-LaunchOrRaise_mlterm, Action (Mouse 3) Menu mltermmenu)
+##*FvwmButtons: (Icon "firefox.png",   Action (Mouse 1) Func-LaunchOrRaise_firefox,  Action (Mouse 3) Menu firefox_menu)
+##*FvwmButtons: (Icon "chrome.png",    Action (Mouse 1) Func-LaunchOrRaise_chromium, Action (Mouse 3) Menu chromium_menu)
+##*FvwmButtons: (Icon "xterm-sol.png", Action (Mouse 1) Func-LaunchOrRaise_mlterm,   Action (Mouse 3) Menu mlterm_menu)
 
 # wineサンプル
-#wine#*FvwmButtons: (Icon "hidemaru.png",  Action (Mouse 1) Func-LaunchOrRaise_hidemaru)
+#wine#*FvwmButtons: (Icon "hidemaru.png",  Action (Mouse 1) Func-LaunchOrRaise_hidemaru, Action (Mouse 3) Menu hidemaru_menu)
 
 ##*FvwmButtons: (Swallow "xload" 'Exec xload -update 3 -nolabel -bg \\#cecece', Action(Mouse 1) Func-LaunchOrRaise_conky)
 ##*FvwmButtons: (Swallow "xbatt" 'Exec xbatt -bg \\#cecece', Padding 0 2)
-
-
