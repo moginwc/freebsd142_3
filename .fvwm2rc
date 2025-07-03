@@ -163,7 +163,7 @@ AddToMenu Programs    "プログラム"                      Title
 +                     ""                                Nop
 ##+                     "イメージツール..."               Exec gimp
 ##+                     "写真..."                         Exec nsxiv -t -r $HOME/Pictures
-+                     "スクリーンショット..."           Exec scrot -s -b $HOME/screenshot%Y%m%d%H%M%S.png
++                     "スクリーンショット..."           Popup Screenshot
 ##+                     ""                                Nop
 ##+                     "地理情報システム QGIS..."        Exec qgis
 ##+                     "3Dモデリング OpenSCAD..."        Exec openscad
@@ -202,6 +202,12 @@ AddToMenu Window-Ops2 "復元"                            Iconify
 +                     "奥へ"                            Lower
 +                     ""                                Nop
 +                     "閉じる"                          Delete
+
+AddToMenu Screenshot  "スクリーンショット"                    Title
++                     "画面全体を取り込む"                    Exec scrot -f       'screenshot%Y%m%d%H%M%S.png'
++                     "アクティブウインドウを取り込む"        Exec scrot -b -u -f 'screenshot%Y%m%d%H%M%S.png'
++                     "アクティブウインドウの内側を取り込む"  Exec scrot -u -f    'screenshot%Y%m%d%H%M%S.png'
++                     "選択部分を取り込む"                    Exec scrot -s -f    'screenshot%Y%m%d%H%M%S.png'
 
 # ランチャー(firefox)右クリックメニュー
 AddToMenu firefox_menu
