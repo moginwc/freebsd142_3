@@ -30,7 +30,7 @@ cp /usr/local/share/fvwm/pixmaps/programs.xpm ~/icons
 cp /usr/local/share/fvwm/pixmaps/xterm-sol.xpm ~/icons
 sudo pkg install -y -q ImageMagick7
 magick ~/icons/programs.xpm -trim +repage -scale 200% ~/icons/programs.png
-magick xterm-sol.xpm -crop 44x34+5+2 xterm-sol.png
+magick ~/icons/xterm-sol.xpm -crop 44x34+5+2 xterm-sol.png
 sudo pkg install -y -q fvwm3
 sudo pkg install -y -q ja-font-ipa noto-sans-jp
 
