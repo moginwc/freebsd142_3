@@ -230,8 +230,6 @@ AddToMenu mlterm_menu
 +                     "mlterm"                          Title
 +                     "新規ウインドウ 80x24"            Exec mlterm -geometry 80x24 -title=端末エミュレータ
 +                     "新規ウインドウ 132x24"           Exec mlterm -geometry 132x24 -title=端末エミュレータ
-+                     ""                                Nop
-+                     "終了"                            All (mlterm) Close
 
 # ランチャー(hidemaru)右クリックメニュー
 AddToMenu hidemaru_menu
