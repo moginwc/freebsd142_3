@@ -12,6 +12,11 @@ sudo pkg install -y -q drm-510-kmod
 sudo sysrc kld_list+=i915kms
 sudo pw groupmod video -m pcuser
 
+# ファイヤーウォールの設定 (3.初期設定 ファイヤーウォール)
+sudo service pf enable
+sudo sysrc pf_rules+=/etc/pf.conf
+sudo cp etc_pf.conf /etc/pf.conf
+
 # vimエディターをインストールする (3.初期設定 vimエディタ)
 sudo pkg install -y -q vim
 cp ./.vimrc ~
