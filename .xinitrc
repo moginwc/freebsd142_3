@@ -28,7 +28,7 @@ mlterm -geometry 80x24+1+1 -title="端末エミュレータ" &
 ##autocutsel -selection PRIMARY &
 ##autocutsel -selection CLIPBOARD &
 
-#rm /tmp/volume_osd_value
-#python3.11 ${HOME}/bin/volume_osd_daemon.py &
+##rm -f /tmp/volume_osd_value
+##python3.11 ${HOME}/bin/volume_osd_daemon.py &
 
 exec fvwm3
