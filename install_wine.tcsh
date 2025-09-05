@@ -7,8 +7,8 @@ rehash # winetricksがインストールされたことを認識させる
 winetricks corefonts
 wineboot # 初回起動でWineシステムを初期化する
 
-# 梅ゴシック、IPAモナーフォントのインストール
-sudo pkg install -y ja-font-ume ja-font-mona-ipa
+# 梅ゴシックのインストール
+sudo pkg install -y ja-font-ume
 
 # 共通の設定を行う
 wineserver -w # wine関係のサーバープロセスをいったん終了する
