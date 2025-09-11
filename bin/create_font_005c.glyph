@@ -1,0 +1,9 @@
+    <TTGlyph name="backslash" xMin="120" yMin="-200" xMax="904" yMax="1672">
+      <contour>
+        <pt x="904" y="-136" on="1"/>
+        <pt x="760" y="-200" on="1"/>
+        <pt x="120" y="1608" on="1"/>
+        <pt x="256" y="1672" on="1"/>
+      </contour>
+      <instructions/>
+    </TTGlyph>
