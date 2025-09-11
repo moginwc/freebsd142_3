@@ -24,7 +24,7 @@ newfont.appendSFNTName('English (US)', 'Fullname', 'My932Gothic Regular')
 newfont.fontname = "My932Gothic"
 
 # 外部 CP932 Unicode 定義ファイルを読み込む
-cp932_file = "create_font.txt"
+cp932_file = "create_font_unicode.txt"
 with open(cp932_file, "r", encoding="utf-8") as f:
     cp932_list = [int(line.strip(), 16) for line in f if line.strip() and not line.startswith("#")]
 
