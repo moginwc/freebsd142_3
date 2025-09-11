@@ -18,6 +18,18 @@ ttx -o ${fn}.ttx ${fn}.ttf
   sed -i '' -e 's/<ulCodePageRange1 value=".*"\/>/<ulCodePageRange1 value="00000000 00000010 00000000 00000001"\/>/' ${fn}.ttx
   sed -i '' -e 's/<xAvgCharWidth value=".*"\/>/<xAvgCharWidth value="1024"\/>/' ${fn}.ttx
 
+# 一部フォントの入れ替えを行う
+
+  # 0x005f アンダースコア(IPAゴシックは細すぎるので厚みをつける)
+  sed -i '' '/<TTGlyph name="underscore"/,/<\/TTGlyph>/d' ${fn}.ttx
+  awk '/<\/glyf>/ { while ((getline line < "create_font_005f.glyph") > 0) print line } { print }' ${fn}.ttx > /tmp/${fn}.ttx
+  mv /tmp/${fn}.ttx ./${fn}.ttx
+
+  # 0x005c バックスラッシュ(IPAゴシックは円記号なのでバックスラッシュに置き換える)
+  sed -i '' '/<TTGlyph name="backslash"/,/<\/TTGlyph>/d' ${fn}.ttx
+  awk '/<\/glyf>/ { while ((getline line < "create_font_005c.glyph") > 0) print line } { print }' ${fn}.ttx > /tmp/${fn}.ttx
+  mv /tmp/${fn}.ttx ./${fn}.ttx
+
 # テキストファイルをフォントファイル.ttfに変換する
 ttx -o ${fn}.ttf ${fn}.ttx
 
