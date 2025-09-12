@@ -69,6 +69,7 @@ cp -r Bz1987Portable ~/wine_bin/Bz
 # wine設定ファイルのコメント外し
 sed -i '' 's/^#wine#//g' ~/.fvwm2rc
 sed -i '' 's/^#wine#//g' ~/.cshrc
+sed -i '' 's/^#wine#//g' ~/.xinitrc
 
 # 8-24. フォントファイルの中身を閲覧したい
 # 10-14. Wineで使えるいい感じの等幅フォントを生成したい
