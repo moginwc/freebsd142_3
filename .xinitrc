@@ -11,7 +11,7 @@ export XIM=uim
 uim-xim &
 uim-toolbar-gtk3 -1-1 &
 
-#export WINEDEBUG=-all
+#wine#export WINEDEBUG=-all
 
 #setxkbmap jp
 
