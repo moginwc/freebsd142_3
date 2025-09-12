@@ -204,11 +204,14 @@ AddToMenu Window-Ops2 "復元"                            Iconify
 +                     ""                                Nop
 +                     "閉じる"                          Delete
 
-AddToMenu Screenshot  "スクリーンショット"                        Title
-+                     "画面全体を取り込む..."                     Exec scrot -f       'screenshot%Y%m%d%H%M%S.png'
-+                     "アクティブウインドウを取り込む..."         Exec scrot -b -u -f 'screenshot%Y%m%d%H%M%S.png'
-+                     "アクティブウインドウの内側を取り込む..."   Exec scrot -u -f    'screenshot%Y%m%d%H%M%S.png'
-+                     "選択部分を取り込む..."                     Exec scrot -s -f    'screenshot%Y%m%d%H%M%S.png'
+AddToMenu Screenshot  "スクリーンショット"                                    Title
++                     "画面全体を取り込む..."                                 Exec scrot -f         $HOME/screenshot%Y%m%d%H%M%S.png
++                     "アクティブウインドウを取り込む..."                     Exec scrot -b -u -f   $HOME/screenshot%Y%m%d%H%M%S.png
++                     "アクティブウインドウの内側を取り込む..."               Exec scrot -u -f      $HOME/screenshot%Y%m%d%H%M%S.png
++                     "選択部分を取り込む..."                                 Exec scrot -s -f      $HOME/screenshot%Y%m%d%H%M%S.png
++                     ""                                                      Nop
++                     "5秒後に画面全体を取り込む..."                          Exec scrot -d 5 -f    $HOME/screenshot%Y%m%d%H%M%S.png
++                     "5秒後に画面全体を取り込む(マウスポインタを含める)..."  Exec scrot -p -d 5 -f $HOME/screenshot%Y%m%d%H%M%S.png
 
 # ランチャー(firefox)右クリックメニュー
 AddToMenu firefox_menu
