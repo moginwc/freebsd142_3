@@ -73,7 +73,15 @@ sudo pkg install -y -q lupe
 sudo pkg install -y -q xpad3
 
 # xpadの初期設定、他config設定
+# 8-23.ファイル管理ソフトThunarを使いたい(.config/Thunar/uca.xml)
+# 8-23.ファイル管理ソフトThunarを使いたい(.config/gtk-3.0/bookmarks)
+# 8-23.ファイル管理ソフトThunarを使いたい(.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml)
 cp -r ./.config ~
+
+# 8-23.ファイル管理ソフトThunarを使いたい、の設定ファイルのコピー
+cp ./.local/share/applications/* ~/.local/share/applications
+mkdir -p ~/.local/share/Thunar/sendto
+cp ./.local/share/Thunar/sendto/* ~/.local/share/Thunar/sendto
 
 # パッケージのアップデート (3.初期設定 パッケージのアップデート)
 sudo pkg update -f
