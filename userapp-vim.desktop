@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Exec=mlterm -e vim %f
+Name=vim
