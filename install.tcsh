@@ -78,11 +78,6 @@ sudo pkg install -y -q xpad3
 # 8-23.ファイル管理ソフトThunarを使いたい(.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml)
 cp -r ./.config ~
 
-# 8-23.ファイル管理ソフトThunarを使いたい、の設定ファイルのコピー
-cp ./.local/share/applications/* ~/.local/share/applications
-mkdir -p ~/.local/share/Thunar/sendto
-cp ./.local/share/Thunar/sendto/* ~/.local/share/Thunar/sendto
-
 # パッケージのアップデート (3.初期設定 パッケージのアップデート)
 sudo pkg update -f
 sudo pkg upgrade
@@ -94,6 +89,12 @@ sudo touch /etc/motd.template
 # 8-6.chromium（ウェブブラウザ）を使用したい
 sudo pkg install -y -q chromium webfonts
 mkdir ~/Downloads
+
+# 8-23.ファイル管理ソフトThunarを使いたい、の設定ファイルのコピー
+sudo pkg install –y -q thunar thunar-archive-plugin xarchiver
+cp ./.local/share/applications/* ~/.local/share/applications
+mkdir -p ~/.local/share/Thunar/sendto
+cp ./.local/share/Thunar/sendto/* ~/.local/share/Thunar/sendto
 
 # 9-1. 9-2.
 cp /usr/local/lib/firefox/browser/chrome/icons/default/default32.png ~/icons/firefox.png
