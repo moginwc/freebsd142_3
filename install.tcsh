@@ -82,6 +82,18 @@ cp -r ./.config ~
 sudo pkg update -f
 sudo pkg upgrade
 
+# 8-7.Macのユーザー辞書をインポートしたい
+# 11-2.Macのユーザー辞書をMozcへインポートしたい
+# 8-17.QGIS(地理空間情報の閲覧、編集、分析)を使いたい→GPSロガーのデータ(NMEA0183形式)を読み込みたい
+# 8-5.Firefoxを起動し、radikoでラジオNIKKEI第1を自動的に再生したい→NHKラジオ第一放送（首都圏）に切り替えたい
+# 13-5.デジカメなどの画像データを、撮影日(年/月/日)別に整理したい
+# 14-2.仮想環境を構築し、FreeBSD内にLinuxをインストールしたい
+# 8-20.外付けカメラを利用したい
+# 15-2.駅発車標表示専用パソコンにしたい
+# 15-4.ドット絵を描いて動かしたい
+# 9-19.音量調整時に、画面上に音量・ミュート状態を表示したい
+cp -r ./bin ~
+
 # 5-4.ログインした際のメッセージを、Last login以外、表示させない
 sudo mv /etc/motd.template /etc/motd.template.old
 sudo touch /etc/motd.template
@@ -96,6 +108,7 @@ xdg-mime default vim.desktop text/plain
 xdg-mime default feh.desktop image/png
 xdg-mime default feh.desktop image/jpeg
 cp ./.local/share/applications/* ~/.local/share/applications
+chmod +x ~/bin/conv_img_480s.tcsh
 mkdir -p ~/.local/share/Thunar/sendto
 cp ./.local/share/Thunar/sendto/* ~/.local/share/Thunar/sendto
 
@@ -184,17 +197,7 @@ cp ./.Xresources ~
 sudo pkg install -y -q sylpheed
 cp -r ./.sylpheed-2.0 ~
 
-# 8-7.Macのユーザー辞書をインポートしたい
-# 11-2.Macのユーザー辞書をMozcへインポートしたい
-# 8-17.QGIS(地理空間情報の閲覧、編集、分析)を使いたい→GPSロガーのデータ(NMEA0183形式)を読み込みたい
-# 8-5.Firefoxを起動し、radikoでラジオNIKKEI第1を自動的に再生したい→NHKラジオ第一放送（首都圏）に切り替えたい
-# 13-5.デジカメなどの画像データを、撮影日(年/月/日)別に整理したい
-# 14-2.仮想環境を構築し、FreeBSD内にLinuxをインストールしたい
-# 8-20.外付けカメラを利用したい
-# 15-2.駅発車標表示専用パソコンにしたい
-# 15-4.ドット絵を描いて動かしたい
-# 9-19.音量調整時に、画面上に音量・ミュート状態を表示したい
-cp -r ./bin ~
+
 
 # 8-11.GIMPを使いたい
 sudo pkg install -y -q gimp
