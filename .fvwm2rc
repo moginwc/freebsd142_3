@@ -56,6 +56,12 @@ AddToFunc Func-LaunchOrRaise_hidemaru
 + I Next (hidemaru.exe) Focus
 + I None (hidemaru.exe) Exec wine $HOME/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe
 
+# mltermのウインドウを右ダブルクリックで<:><q><Enter>を送出する
+##DestroyFunc RightClickFunc
+##AddToFunc   RightClickFunc
+##+ I Raise
+##+ D Current (mlterm) Exec xdotool key 'colon'  key 'q' key 'Return'
+
 #----------------------------------------------------------------------
 # 2: スタイル
 #----------------------------------------------------------------------
@@ -268,6 +274,9 @@ Mouse 1 I A Iconify
 
 # 最小化されたアイコンを右クリックした場合の動作
 Mouse 3 I A Menu Window-Ops2 Nop
+
+# ウインドウ上で右クリック(右ダブルクリック)された場合の動作
+##Mouse 3 W A Function RightClickFunc
 
 # ボリュームUP/DOWN/MUTEボタンの動作
 #Key XF86AudioRaiseVolume A A Exec mixer vol.volume=+0.05
