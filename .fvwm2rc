@@ -275,8 +275,8 @@ Mouse 1 I A Iconify
 # 最小化されたアイコンを右クリックした場合の動作
 Mouse 3 I A Menu Window-Ops2 Nop
 
-# ウインドウ上で右クリック(右ダブルクリック)された場合の動作
-##Mouse 3 W A Function RightClickFunc
+# mltermのウインドウ内で右クリック(右ダブルクリック)された場合の動作
+##Mouse 3 W A Current (mlterm) Function RightClickFunc
 
 # ボリュームUP/DOWN/MUTEボタンの動作
 #Key XF86AudioRaiseVolume A A Exec mixer vol.volume=+0.05
