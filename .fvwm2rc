@@ -56,7 +56,7 @@ AddToFunc Func-LaunchOrRaise_hidemaru
 + I Next (hidemaru.exe) Focus
 + I None (hidemaru.exe) Exec wine $HOME/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe
 
-# mltermのウインドウを右ダブルクリックで<:><q><Enter>を送出する
+# thunarから起動したvimを右ダブルクリックで<:><q><Enter>を送出する
 ##DestroyFunc RightClickFunc
 ##AddToFunc   RightClickFunc
 ##+ I Raise
