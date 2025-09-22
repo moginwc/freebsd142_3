@@ -60,7 +60,7 @@ AddToFunc Func-LaunchOrRaise_hidemaru
 ##DestroyFunc RightClickFunc
 ##AddToFunc   RightClickFunc
 ##+ I Raise
-##+ D Current (mlterm) Exec xdotool key 'colon'  key 'q' key 'Return'
+##+ D Current (thunar-vim) Exec xdotool key 'colon'  key 'q' key 'Return'
 
 #----------------------------------------------------------------------
 # 2: スタイル
@@ -275,8 +275,8 @@ Mouse 1 I A Iconify
 # 最小化されたアイコンを右クリックした場合の動作
 Mouse 3 I A Menu Window-Ops2 Nop
 
-# mltermのウインドウ内で右クリック(右ダブルクリック)された場合の動作
-##Mouse 3 W A Current (mlterm) Function RightClickFunc
+# thunarから起動されたvimのウインドウ内で右ダブルクリックされた場合の動作
+##Mouse 3 W A Current (thunar-vim) Function RightClickFunc
 
 # ボリュームUP/DOWN/MUTEボタンの動作
 #Key XF86AudioRaiseVolume A A Exec mixer vol.volume=+0.05
