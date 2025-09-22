@@ -1,4 +1,4 @@
 [Desktop Entry]
 Type=Application
-Exec=mlterm -e vim %f
-Name=vim
+Exec=mlterm -geometry 132x24 -title="端末エミュレータ(Thunarから起動)" -name "thunar-vim" -e vim %f
+Name=vim(Thunarから起動)
