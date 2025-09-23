@@ -57,10 +57,10 @@ AddToFunc Func-LaunchOrRaise_hidemaru
 + I None (hidemaru.exe) Exec wine $HOME/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe
 
 # thunarから起動したvimを右ダブルクリックで<:><q><Enter>を送出する
-##DestroyFunc RightClickFunc
-##AddToFunc   RightClickFunc
-##+ I Raise
-##+ D Current (thunar-vim) Exec xdotool key 'colon'  key 'q' key 'Return'
+#保留#DestroyFunc RightClickFunc
+#保留#AddToFunc   RightClickFunc
+#保留#+ I Raise
+#保留#+ D Current (thunar-vim) Exec xdotool key 'colon'  key 'q' key 'Return'
 
 #----------------------------------------------------------------------
 # 2: スタイル
@@ -276,7 +276,7 @@ Mouse 1 I A Iconify
 Mouse 3 I A Menu Window-Ops2 Nop
 
 # thunarから起動されたvimのウインドウ内で右ダブルクリックされた場合の動作
-##Mouse 3 W A Current (thunar-vim) Function RightClickFunc
+#保留#Mouse 3 W A Current (thunar-vim) Function RightClickFunc
 
 # ボリュームUP/DOWN/MUTEボタンの動作
 #Key XF86AudioRaiseVolume A A Exec mixer vol.volume=+0.05
