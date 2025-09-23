@@ -198,8 +198,6 @@ cp ./.Xresources ~
 sudo pkg install -y -q sylpheed
 cp -r ./.sylpheed-2.0 ~
 
-
-
 # 8-11.GIMPを使いたい
 sudo pkg install -y -q gimp
 
