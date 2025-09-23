@@ -107,6 +107,7 @@ sudo pkg install –y -q thunar thunar-archive-plugin xarchiver
 xdg-mime default vim.desktop text/plain
 xdg-mime default feh.desktop image/png
 xdg-mime default feh.desktop image/jpeg
+mkdir -p ~/.local/share/applications
 cp ./.local/share/applications/* ~/.local/share/applications
 chmod +x ~/bin/conv_img_480s.tcsh
 mkdir -p ~/.local/share/Thunar/sendto
