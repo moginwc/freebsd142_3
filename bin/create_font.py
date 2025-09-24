@@ -70,9 +70,3 @@ newfont.em = font.em
 output_path = "my932gothic.ttf" # ファイル名は全て小文字
 newfont.generate(output_path)
 print(f"抜き出し完了: {output_path}")
-
-# 今後の展開(案)
-# ・0x005cをバックスラッシュにしたい。
-# ・0x2212を全角化したい。
-# ・CP932とSJISでコードポイントが違うフォントをわかりやすくしたい。
-# ・全角スペースをわかりやすくしたい。
