@@ -28,9 +28,9 @@
             "url": "https://translate.google.com/"
          }, {
             "id": "10",
-            "name": "NHKニュース",
+            "name": "47NEWS",
             "type": "url",
-            "url": "https://www3.nhk.or.jp/news/"
+            "url": "https://www.47news.jp/"
          }, {
             "id": "11",
             "name": "日本気象協会",
