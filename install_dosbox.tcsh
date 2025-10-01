@@ -23,4 +23,7 @@ fetch https://ftp.vector.co.jp/01/03/557/lmv213.lzh
 lha xw=${home}/dos/UTIL lmv213.lzh
 mv lmv213.lzh ${home}/dos/OLS/LMV213.LZH
 
+# ファイル名の大文字化
+find ~/dos/UTIL/ -type f -exec tcsh -c 'set f="{}"; set bn=`basename "$f"`; set dn=`dirname "$f"`; mv "$f" "$dn/`echo $bn | tr a-z A-Z`"' \;
+
 exit
