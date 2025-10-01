@@ -171,7 +171,7 @@ endif
 # 11-1.mozcのインストールと初期設定 (*ここでは初期設定のみでインストールはしない)
 cp -r ./.uim.d-mozc/customs/custom-mozc.scm ~/.uim.d/customs/
 mkdir ~/.mozc
-/usr/local/bin/xxd -r -p ./.mozc/config1.bin > ~/.mozc/config1.db
+/usr/local/bin/xxd -r -p ./.mozc/config1.db.hex > ~/.mozc/config1.db
 
 # 8-14.サムネイル一覧から画像を選択して表示したい (nsxiv)
 sudo pkg install -y -q nsxiv
