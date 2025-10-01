@@ -26,4 +26,7 @@ mv lmv213.lzh ${home}/dos/OLS/LMV213.LZH
 # ファイル名の大文字化
 find ~/dos/UTIL/ -type f -exec tcsh -c 'set f="{}"; set bn=`basename "$f"`; set dn=`dirname "$f"`; mv "$f" "$dn/`echo $bn | tr a-z A-Z`"' \;
 
+# filmtnv.cnf(filmtnのカスタマイズファイル)ファイルの展開
+xxd -r -p filmtnv.cnf.hex > ~/dos/UTIL/FILMTNV.CNF
+
 exit
