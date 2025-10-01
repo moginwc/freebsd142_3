@@ -1,5 +1,8 @@
 #!/bin/tcsh
 
+# シェルスクリプト初期設定
+set ver="freebsd142_3"
+
 # システム起動時に ntpdが起動するよう設定する (3.初期設定 ntpd)
 sudo service ntpd enable
 sudo cp ./etc_ntp.conf /etc/ntp.conf
@@ -176,6 +179,19 @@ chmod +x ~/.config/nsxiv/exec/image-info
 chmod +x ~/.config/nsxiv/exec/key-handler
 sudo pkg install -y -q p5-Image-ExifTool
 
+# 8-26. 軽量画像ビュアnsxivをカスタマイズして使いたい (nsxivバージョン33であることが前提)
+sudo pkg install -y -q gmake git
+mkdir ~/work
+pushd ~/work
+git clone https://codeberg.org/nsxiv/nsxiv.git
+pushd ./nsxiv
+cp ~/${ver}/nsxiv/config.h .
+cp ~/${ver}/nsxiv/config.mk .
+gmake CC=cc
+sudo gmake install
+popd
+popd
+
 # サンプル画像のコピー
 mkdir ~/Pictures
 magick ./colorbar1.svg ~/Pictures/colorbar1.png
@@ -222,7 +238,7 @@ sudo sysrc clear_tmp_enable="YES"
 sudo pkg install -y -q feh
 
 # 7-3.Windowsやmacとファイル共有したい(SMB)
-sudo pkg install -y -q samba419
+sudo pkg install -y -q samba416
 sudo service samba_server enable
 mkdir ~/share
 sudo cp etc_smb4.conf /usr/local/etc/smb4.conf
