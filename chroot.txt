@@ -47,6 +47,7 @@ xset r rate 250 40
 # chroot環境から抜ける
 # [chroot]
 exit
+exit
 
 # chroot環境のFirefoxを起動する
 xhost +local:
