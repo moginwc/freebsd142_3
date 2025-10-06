@@ -50,6 +50,7 @@ cp ./.fvwm2rc ~
 sed -i '' 's/^##//g' ~/.fvwm2rc
 sed -i '' 's/^##//g' ~/.xinitrc
 sed -i '' 's/^##//g' ~/.login
+sed -i '' 's/^"//g'  ~/.vimrc
 
 # 端末エミュレータのインストールと設定 (3.初期設定 端末エミュレータ)
 sudo pkg install -y -q mlterm
