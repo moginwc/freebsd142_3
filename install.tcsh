@@ -106,7 +106,7 @@ sudo pkg install -y -q chromium webfonts
 mkdir ~/Downloads
 
 # 8-23.ファイル管理ソフトThunarを使いたい、のインストールと設定ファイルのコピー
-sudo pkg install –y -q thunar thunar-archive-plugin xarchiver
+sudo pkg install -y -q thunar thunar-archive-plugin xarchiver
 xdg-mime default vim.desktop text/plain
 xdg-mime default feh.desktop image/png
 xdg-mime default feh.desktop image/jpeg
