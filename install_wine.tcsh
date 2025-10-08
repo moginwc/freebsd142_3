@@ -14,13 +14,13 @@ sudo pkg install -y ja-font-ume
 wineserver -w # wine関係のサーバープロセスをいったん終了する
 
 # 共通の設定を行う - ウインドウの配色を設定する
-sed -i '' 's/^"ActiveTitle"=.*/"ActiveTitle"="178 77 122"/'                 ~/.wine/user.reg
-sed -i '' 's/^"GradientActiveTitle"=.*/"GradientActiveTitle"="178 77 122"/' ~/.wine/user.reg
-sed -i '' 's/^"TitleText"=.*/"TitleText"="255 255 255"/'                    ~/.wine/user.reg
+#保留# sed -i '' 's/^"ActiveTitle"=.*/"ActiveTitle"="178 77 122"/'                 ~/.wine/user.reg
+#保留# sed -i '' 's/^"GradientActiveTitle"=.*/"GradientActiveTitle"="178 77 122"/' ~/.wine/user.reg
+#保留# sed -i '' 's/^"TitleText"=.*/"TitleText"="255 255 255"/'                    ~/.wine/user.reg
 
 # 共通の設定を行う - ウインドウのサイズを設定する
-sed -i '' 's/^"CaptionHeight"=.*/"CaptionHeight"="-270"/'                   ~/.wine/user.reg
-sed -i '' 's/^"CaptionWidth"=.*/"CaptionWidth"="-270"/'                     ~/.wine/user.reg
+#保留# sed -i '' 's/^"CaptionHeight"=.*/"CaptionHeight"="-270"/'                   ~/.wine/user.reg
+#保留# sed -i '' 's/^"CaptionWidth"=.*/"CaptionWidth"="-270"/'                     ~/.wine/user.reg
 
 # 共通の設定を行う - ウィンドウマネージャがウィンドウを装飾するのを許可するのチェックを外す
 sudo pkg install -y ja-nkf
@@ -33,7 +33,7 @@ regedit /s ./wine-japanese.reg
 
 # 秀丸のサイレントインストール
 sudo pkg install -y cabextract # 秀丸のインストーラーの実態は.cabファイル
-fetch https://hide.maruo.co.jp/software/bin/hm946_x64_signed.exe
+fetch https://hide.maruo.co.jp/software/bin/hm948_x64_signed.exe
 mkdir hidemaru
 cabextract -d ./hidemaru hm946_x64_signed.exe
 wine ./hidemaru/hmsetup.exe /h # /hがサイレントインストールオプション
