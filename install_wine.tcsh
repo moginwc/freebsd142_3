@@ -75,4 +75,4 @@ sed -i '' 's/^#wine#//g' ~/.xinitrc
 # 10-14. Wineで使えるいい感じの等幅フォントを生成したい
 sudo pkg install -y fontforge
 cd ./bin
-./create_font.tcsh
+tcsh ./create_font.tcsh
