@@ -97,6 +97,7 @@ sudo pkg upgrade
 # 15-4.ドット絵を描いて動かしたい
 # 9-19.音量調整時に、画面上に音量・ミュート状態を表示したい
 cp -r ./bin ~
+chmod +x ~/bin/*.tcsh
 
 # 5-4.ログインした際のメッセージを、Last login以外、表示させない
 sudo mv /etc/motd.template /etc/motd.template.old
