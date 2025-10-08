@@ -35,7 +35,7 @@ regedit /s ./wine-japanese.reg
 sudo pkg install -y cabextract # 秀丸のインストーラーの実態は.cabファイル
 fetch https://hide.maruo.co.jp/software/bin/hm948_x64_signed.exe
 mkdir hidemaru
-cabextract -d ./hidemaru hm946_x64_signed.exe
+cabextract -d ./hidemaru hm948_x64_signed.exe
 wine ./hidemaru/hmsetup.exe /h # /hがサイレントインストールオプション
 
 # 秀丸アイコンの抽出
