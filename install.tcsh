@@ -183,6 +183,7 @@ sudo pkg install -y -q p5-Image-ExifTool
 
 # 8-26. 軽量画像ビュアnsxivをカスタマイズして使いたい (nsxivバージョン33であることが前提)
 sudo pkg install -y -q gmake git
+rehash # gmakeを認識させる
 mkdir ~/work
 pushd ~/work
 git clone https://codeberg.org/nsxiv/nsxiv.git
