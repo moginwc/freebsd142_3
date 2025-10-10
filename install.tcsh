@@ -109,9 +109,9 @@ mkdir ~/Downloads
 
 # 8-23.ファイル管理ソフトThunarを使いたい、のインストールと設定ファイルのコピー
 sudo pkg install -y -q thunar thunar-archive-plugin xarchiver
-xdg-mime default vim.desktop text/plain
-xdg-mime default feh.desktop image/png
-xdg-mime default feh.desktop image/jpeg
+xdg-mime default userapp-vim-readonly.desktop text/plain
+xdg-mime default userapp-feh.desktop image/png
+xdg-mime default userapp-feh.desktop image/jpeg
 mkdir -p ~/.local/share/applications
 cp ./.local/share/applications/* ~/.local/share/applications
 chmod +x ~/bin/conv_img_480s.tcsh
